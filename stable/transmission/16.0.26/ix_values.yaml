@@ -12,19 +12,19 @@ workload:
             liveness:
               enabled: true
               type: tcp
-              port: "{{ .Values.service.main.ports.main.port }}"
+              port: "{{ .Values.service.main.ports.main.targetPort }}"
               # type: http
               # path: "{{ .Values.workload.main.podSpec.containers.main.env.TRANSMISSION__RPC_URL }}"
             startup:
               enabled: true
               type: tcp
-              port: "{{ .Values.service.main.ports.main.port }}"
+              port: "{{ .Values.service.main.ports.main.targetPort }}"
               # type: http
               # path: "{{ .Values.workload.main.podSpec.containers.main.env.TRANSMISSION__RPC_URL }}"
             readiness:
               enabled: true
               type: tcp
-              port: "{{ .Values.service.main.ports.main.port }}"
+              port: "{{ .Values.service.main.ports.main.targetPort }}"
               # type: http
               # path: "{{ .Values.workload.main.podSpec.containers.main.env.TRANSMISSION__RPC_URL }}"
           env:
